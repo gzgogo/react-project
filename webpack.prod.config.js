@@ -21,7 +21,7 @@ const AppPaths = {
 };
 
 var AppPages = [
-  { title: 'U-Time全国巡回', entry: 'main', template: path.resolve(AppPaths.src, 'index.html') , fileName: 'index.html' }
+  { title: 'React Project', entry: 'main', template: path.resolve(AppPaths.src, 'index.html') , fileName: 'index.html' }
 ];
 
 // var node_modules_dir = path.join(__dirname, 'node_modules');
