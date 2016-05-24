@@ -1,7 +1,4 @@
 
-// import 'file?name=js/lib/flexible/[name].[ext]!./lib/flexible/flexible';
-// import 'file?name=js/lib/flexible/[name].[ext]!./lib/flexible/flexible_css';
-
 import '../stylesheet/common-style.styl';
 
 import React from 'react';

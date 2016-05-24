@@ -1,0 +1,20 @@
+.hide {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+[v-cloak] {
+  display: none;
+}
+h1 {
+  color: #00f;
+  font-size: 32px;
+  margin: 30px 0px 0px 30px;
+}

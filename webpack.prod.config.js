@@ -12,6 +12,7 @@
 
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const AppPaths = {
@@ -53,7 +54,7 @@ var config = {
       },
       {
         test: /\.styl/,
-        loader: 'style!css!stylus'
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
       },
       //配置name参数，值为img output的位置(img后由hash值，避免cache导致的更新不及时)
       //name属性的值为基于output.path属性的相对路径 limit:8192 1200000
@@ -70,7 +71,7 @@ var config = {
   plugins: [
     //此输出路径基于output.path: path.normalize("../../build/css/[name].css")
     //而且此路径只能使用基于output.path的相对路径，不能使用绝对路径
-    // new ExtractTextPlugin( path.normalize("../css/[name].min.css") ),
+    new ExtractTextPlugin( path.normalize("./css/[name].min.css") )
 
     //提取公共模块
     // new webpack.optimize.CommonsChunkPlugin({name: 'common', filename: 'common.js', chunks: ['main.jsx']}),
