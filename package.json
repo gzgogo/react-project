@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "webpack-dev-server --inline --hot --quiet --config webpack.dev.config.js --port 8888",
+    "dev1": "node server.js",
     "build": "webpack --config webpack.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

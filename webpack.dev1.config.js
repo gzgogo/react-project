@@ -28,7 +28,11 @@ var AppPages = [
 
 var config = {
   entry: {
-    main: path.resolve(AppPaths.src, 'js/main.js')
+    main: [
+      'webpack-dev-server/client?http://localhost:8888',
+      'webpack/hot/only-dev-server',
+      path.resolve(AppPaths.src, 'js/main.js')
+    ]
   },
 
   output: {
@@ -89,8 +93,8 @@ var config = {
     // })
 
     //热替换插件和防止报错插件
-    // new webpack.HotModuleReplacementPlugin(),
-    // new webpack.NoErrorsPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ].concat(HtmlWebpackPluginPages(AppPages)),
 
   resolve: {
