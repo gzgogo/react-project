@@ -23,7 +23,7 @@ var AppPages = [
 // var node_modules_dir = path.join(__dirname, 'node_modules');
 //
 // var depsPath = {
-//     react: 'react/dist/react.min.js'
+//     react: 'react/dist/react.min.javascripts'
 // };
 
 var config = {
@@ -31,13 +31,13 @@ var config = {
     main: [
       'webpack-dev-server/client?http://localhost:8888',
       'webpack/hot/only-dev-server',
-      path.resolve(AppPaths.src, 'js/main.js')
+      path.resolve(AppPaths.src, 'javascripts/main.js')
     ]
   },
 
   output: {
     path: AppPaths.dst,
-    filename: 'js/[name].min.js',
+    filename: 'javascripts/[name].min.js',
     // publicPath: '/' //默认为'/'
   },
 
@@ -75,7 +75,7 @@ var config = {
     // new ExtractTextPlugin( path.normalize("../css/[name].min.css") ),
 
     //提取公共模块
-    // new webpack.optimize.CommonsChunkPlugin({name: 'common', filename: 'common.js', chunks: ['main.jsx']}),
+    // new webpack.optimize.CommonsChunkPlugin({name: 'common', filename: 'common.javascripts', chunks: ['main.jsx']}),
 
     //设置此处，则在JS中不用类似require('vue')引入基础模块， 只要直接使用Vue变量即可
     //此处通常可用做对常用组件，库的提前设置

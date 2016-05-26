@@ -1,5 +1,5 @@
 
-import './helloworld.styl';
+import './HelloWorld.styl';
 import React from 'react';
 
 var HelloWorld = React.createClass({

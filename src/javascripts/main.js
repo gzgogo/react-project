@@ -1,9 +1,9 @@
 
-import '../stylesheet/common-style.styl';
+import '../stylesheets/common-style.styl';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/app'
+import App from './containers/App'
 
 ReactDOM.render(
     <App />,
